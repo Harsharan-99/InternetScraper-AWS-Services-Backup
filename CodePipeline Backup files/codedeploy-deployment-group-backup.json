@@ -1,0 +1,83 @@
+{
+    "deploymentGroupInfo": {
+        "applicationName": "AppECS-web-scraper-cluster-web-scraper-service-v4",
+        "deploymentGroupId": "45124775-d263-4230-be4b-8006831c55af",
+        "deploymentGroupName": "DgpECS-web-scraper-cluster-web-scraper-service-v4",
+        "deploymentConfigName": "CodeDeployDefault.ECSAllAtOnce",
+        "ec2TagFilters": [],
+        "onPremisesInstanceTagFilters": [],
+        "autoScalingGroups": [],
+        "serviceRoleArn": "arn:aws:iam::058264332511:role/CodeDeployECSServiceRole",
+        "targetRevision": {
+            "revisionType": "S3",
+            "s3Location": {
+                "bucket": "codepipeline-ca-central-1-224438893699",
+                "key": "web-scraper-cicd-pip/BuildArtif/UgInL8q",
+                "bundleType": "zip",
+                "eTag": "326aaf6d65cd98d6977de39e5e952ebf"
+            }
+        },
+        "triggerConfigurations": [],
+        "autoRollbackConfiguration": {
+            "enabled": true,
+            "events": [
+                "DEPLOYMENT_STOP_ON_REQUEST",
+                "DEPLOYMENT_FAILURE"
+            ]
+        },
+        "deploymentStyle": {
+            "deploymentType": "BLUE_GREEN",
+            "deploymentOption": "WITH_TRAFFIC_CONTROL"
+        },
+        "outdatedInstancesStrategy": "UPDATE",
+        "blueGreenDeploymentConfiguration": {
+            "terminateBlueInstancesOnDeploymentSuccess": {
+                "action": "TERMINATE",
+                "terminationWaitTimeInMinutes": 60
+            },
+            "deploymentReadyOption": {
+                "actionOnTimeout": "CONTINUE_DEPLOYMENT",
+                "waitTimeInMinutes": 0
+            }
+        },
+        "loadBalancerInfo": {
+            "targetGroupPairInfoList": [
+                {
+                    "targetGroups": [
+                        {
+                            "name": "tg-web-sc-web-scraper-service--2"
+                        },
+                        {
+                            "name": "web-scraper-target-grp"
+                        }
+                    ],
+                    "prodTrafficRoute": {
+                        "listenerArns": [
+                            "arn:aws:elasticloadbalancing:ca-central-1:058264332511:listener/app/web-scraper-alb/1a9de5803e481c02/03d4caa3b90c1fc0"
+                        ]
+                    }
+                }
+            ]
+        },
+        "lastSuccessfulDeployment": {
+            "deploymentId": "d-MVOTFH0A8",
+            "status": "Succeeded",
+            "endTime": "2024-12-09T13:59:02.271000-05:00",
+            "createTime": "2024-12-09T13:55:42.306000-05:00"
+        },
+        "lastAttemptedDeployment": {
+            "deploymentId": "d-MVOTFH0A8",
+            "status": "Succeeded",
+            "endTime": "2024-12-09T13:59:02.271000-05:00",
+            "createTime": "2024-12-09T13:55:42.306000-05:00"
+        },
+        "computePlatform": "ECS",
+        "ecsServices": [
+            {
+                "serviceName": "web-scraper-service-v4",
+                "clusterName": "web-scraper-cluster"
+            }
+        ],
+        "terminationHookEnabled": false
+    }
+}

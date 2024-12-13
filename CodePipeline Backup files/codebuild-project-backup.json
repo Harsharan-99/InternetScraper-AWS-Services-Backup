@@ -1,0 +1,55 @@
+{
+    "projects": [
+        {
+            "name": "web-scraper-build",
+            "arn": "arn:aws:codebuild:ca-central-1:058264332511:project/web-scraper-build",
+            "source": {
+                "type": "CODEPIPELINE",
+                "buildspec": "version: 0.2\n\nphases:\n  pre_build:\n    commands:\n      - echo Logging in to Amazon ECR...\n      - aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 058264332511.dkr.ecr.ca-central-1.amazonaws.com\n  build:\n    commands:\n      - echo Building the Docker image...\n      - docker build --platform linux/amd64 -t web-scraper-backend .\n      - docker tag web-scraper-backend:latest 058264332511.dkr.ecr.ca-central-1.amazonaws.com/web-scraper-backend:latest\n  post_build:\n    commands:\n      - echo Pushing the Docker image...\n      - docker push 058264332511.dkr.ecr.ca-central-1.amazonaws.com/web-scraper-backend:latest\n      - echo Creating imagedefinitions.json file...\n      - printf '[{\"name\":\"web-scraper-backend\",\"imageUri\":\"058264332511.dkr.ecr.ca-central-1.amazonaws.com/web-scraper-backend:latest\"}]' > imagedefinitions.json\n\nartifacts:\n  files:\n    - imagedefinitions.json  # Only include imagedefinitions.json as required for ECS deploy\n    - appspec.yml\n",
+                "insecureSsl": false
+            },
+            "secondarySources": [],
+            "secondarySourceVersions": [],
+            "artifacts": {
+                "type": "CODEPIPELINE",
+                "name": "web-scraper-build",
+                "packaging": "NONE",
+                "encryptionDisabled": false
+            },
+            "secondaryArtifacts": [],
+            "cache": {
+                "type": "NO_CACHE"
+            },
+            "environment": {
+                "type": "LINUX_CONTAINER",
+                "image": "aws/codebuild/amazonlinux2-x86_64-standard:5.0",
+                "computeType": "BUILD_GENERAL1_SMALL",
+                "environmentVariables": [],
+                "privilegedMode": false,
+                "imagePullCredentialsType": "CODEBUILD"
+            },
+            "serviceRole": "arn:aws:iam::058264332511:role/service-role/codebuild-web-scraper-build-service-role-v",
+            "timeoutInMinutes": 60,
+            "queuedTimeoutInMinutes": 480,
+            "encryptionKey": "arn:aws:kms:ca-central-1:058264332511:alias/aws/s3",
+            "tags": [],
+            "created": "2024-10-10T19:15:31.418000-04:00",
+            "lastModified": "2024-10-10T20:29:47.788000-04:00",
+            "badge": {
+                "badgeEnabled": false
+            },
+            "logsConfig": {
+                "cloudWatchLogs": {
+                    "status": "ENABLED"
+                },
+                "s3Logs": {
+                    "status": "DISABLED",
+                    "encryptionDisabled": false
+                }
+            },
+            "fileSystemLocations": [],
+            "projectVisibility": "PRIVATE"
+        }
+    ],
+    "projectsNotFound": []
+}

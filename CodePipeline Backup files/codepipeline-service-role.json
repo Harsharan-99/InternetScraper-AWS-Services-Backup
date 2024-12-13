@@ -1,0 +1,26 @@
+{
+    "Role": {
+        "Path": "/service-role/",
+        "RoleName": "AWSCodePipelineServiceRole-ca-central-1-web-scraper-cicd-pipeli",
+        "RoleId": "AROAQ3EGTFDP7ZTUFJS5Y",
+        "Arn": "arn:aws:iam::058264332511:role/service-role/AWSCodePipelineServiceRole-ca-central-1-web-scraper-cicd-pipeli",
+        "CreateDate": "2024-10-10T23:22:45+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "codepipeline.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+        },
+        "MaxSessionDuration": 3600,
+        "RoleLastUsed": {
+            "LastUsedDate": "2024-12-09T18:59:16+00:00",
+            "Region": "ca-central-1"
+        }
+    }
+}

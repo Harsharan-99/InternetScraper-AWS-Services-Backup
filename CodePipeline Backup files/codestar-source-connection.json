@@ -1,0 +1,9 @@
+{
+    "Connection": {
+        "ConnectionName": "scraper_repository_connection",
+        "ConnectionArn": "arn:aws:codeconnections:ca-central-1:058264332511:connection/a7bf0315-e3a9-4d77-98bb-af8940b7f65b",
+        "ProviderType": "GitHub",
+        "OwnerAccountId": "058264332511",
+        "ConnectionStatus": "AVAILABLE"
+    }
+}

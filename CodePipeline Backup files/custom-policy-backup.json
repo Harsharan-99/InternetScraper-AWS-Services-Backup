@@ -1,0 +1,16 @@
+{
+    "Policy": {
+        "PolicyName": "AWSCodePipelineServiceRole-ca-central-1-web-scraper-cicd-pipeline",
+        "PolicyId": "ANPAQ3EGTFDP5JYMX2BS3",
+        "Arn": "arn:aws:iam::058264332511:policy/service-role/AWSCodePipelineServiceRole-ca-central-1-web-scraper-cicd-pipeline",
+        "Path": "/service-role/",
+        "DefaultVersionId": "v1",
+        "AttachmentCount": 1,
+        "PermissionsBoundaryUsageCount": 0,
+        "IsAttachable": true,
+        "Description": "Policy used in trust relationship with CodePipeline",
+        "CreateDate": "2024-10-10T23:22:45+00:00",
+        "UpdateDate": "2024-10-10T23:22:45+00:00",
+        "Tags": []
+    }
+}

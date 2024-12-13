@@ -1,0 +1,9 @@
+{
+    "application": {
+        "applicationId": "02af8dcc-af12-4d9b-abb5-10ee0effa507",
+        "applicationName": "AppECS-web-scraper-cluster-web-scraper-service-v4",
+        "createTime": "2024-12-09T13:32:54.962000-05:00",
+        "linkedToGitHub": false,
+        "computePlatform": "ECS"
+    }
+}
