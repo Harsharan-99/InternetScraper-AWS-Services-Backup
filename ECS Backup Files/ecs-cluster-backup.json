@@ -1,0 +1,25 @@
+{
+    "clusters": [
+        {
+            "clusterArn": "arn:aws:ecs:ca-central-1:058264332511:cluster/web-scraper-cluster",
+            "clusterName": "web-scraper-cluster",
+            "status": "ACTIVE",
+            "registeredContainerInstancesCount": 0,
+            "runningTasksCount": 1,
+            "pendingTasksCount": 0,
+            "activeServicesCount": 1,
+            "statistics": [],
+            "tags": [],
+            "settings": [],
+            "capacityProviders": [
+                "FARGATE",
+                "FARGATE_SPOT"
+            ],
+            "defaultCapacityProviderStrategy": [],
+            "serviceConnectDefaults": {
+                "namespace": "arn:aws:servicediscovery:ca-central-1:058264332511:namespace/ns-4lbfxx2ppqzm6wwt"
+            }
+        }
+    ],
+    "failures": []
+}

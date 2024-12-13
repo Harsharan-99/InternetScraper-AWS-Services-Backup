@@ -1,0 +1,50 @@
+{
+    "TargetGroups": [
+        {
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/tg-web-sc-web-scraper-service--2/ba3754f58acc6c47",
+            "TargetGroupName": "tg-web-sc-web-scraper-service--2",
+            "Protocol": "HTTP",
+            "Port": 80,
+            "VpcId": "vpc-0548f9776dd1e0df3",
+            "HealthCheckProtocol": "HTTP",
+            "HealthCheckPort": "traffic-port",
+            "HealthCheckEnabled": true,
+            "HealthCheckIntervalSeconds": 30,
+            "HealthCheckTimeoutSeconds": 5,
+            "HealthyThresholdCount": 5,
+            "UnhealthyThresholdCount": 2,
+            "HealthCheckPath": "/",
+            "Matcher": {
+                "HttpCode": "200"
+            },
+            "LoadBalancerArns": [],
+            "TargetType": "ip",
+            "ProtocolVersion": "HTTP1",
+            "IpAddressType": "ipv4"
+        },
+        {
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f",
+            "TargetGroupName": "web-scraper-target-grp",
+            "Protocol": "HTTP",
+            "Port": 5000,
+            "VpcId": "vpc-0548f9776dd1e0df3",
+            "HealthCheckProtocol": "HTTP",
+            "HealthCheckPort": "traffic-port",
+            "HealthCheckEnabled": true,
+            "HealthCheckIntervalSeconds": 10,
+            "HealthCheckTimeoutSeconds": 5,
+            "HealthyThresholdCount": 2,
+            "UnhealthyThresholdCount": 2,
+            "HealthCheckPath": "/health",
+            "Matcher": {
+                "HttpCode": "200"
+            },
+            "LoadBalancerArns": [
+                "arn:aws:elasticloadbalancing:ca-central-1:058264332511:loadbalancer/app/web-scraper-alb/1a9de5803e481c02"
+            ],
+            "TargetType": "ip",
+            "ProtocolVersion": "HTTP1",
+            "IpAddressType": "ipv4"
+        }
+    ]
+}

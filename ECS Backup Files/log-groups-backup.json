@@ -1,0 +1,49 @@
+{
+    "logGroups": [
+        {
+            "logGroupName": "/aws/codebuild/WebScraperBackendBuild",
+            "creationTime": 1727799037508,
+            "metricFilterCount": 0,
+            "arn": "arn:aws:logs:ca-central-1:058264332511:log-group:/aws/codebuild/WebScraperBackendBuild:*",
+            "storedBytes": 366263,
+            "logGroupClass": "STANDARD",
+            "logGroupArn": "arn:aws:logs:ca-central-1:058264332511:log-group:/aws/codebuild/WebScraperBackendBuild"
+        },
+        {
+            "logGroupName": "/aws/codebuild/web-scraper-build",
+            "creationTime": 1728602593262,
+            "metricFilterCount": 0,
+            "arn": "arn:aws:logs:ca-central-1:058264332511:log-group:/aws/codebuild/web-scraper-build:*",
+            "storedBytes": 1606658,
+            "logGroupClass": "STANDARD",
+            "logGroupArn": "arn:aws:logs:ca-central-1:058264332511:log-group:/aws/codebuild/web-scraper-build"
+        },
+        {
+            "logGroupName": "/aws/codebuild/web-scraper-build-v2",
+            "creationTime": 1728574688996,
+            "metricFilterCount": 0,
+            "arn": "arn:aws:logs:ca-central-1:058264332511:log-group:/aws/codebuild/web-scraper-build-v2:*",
+            "storedBytes": 1855234,
+            "logGroupClass": "STANDARD",
+            "logGroupArn": "arn:aws:logs:ca-central-1:058264332511:log-group:/aws/codebuild/web-scraper-build-v2"
+        },
+        {
+            "logGroupName": "/ecs/centris-web-scraper-task",
+            "creationTime": 1725395430080,
+            "metricFilterCount": 0,
+            "arn": "arn:aws:logs:ca-central-1:058264332511:log-group:/ecs/centris-web-scraper-task:*",
+            "storedBytes": 221832,
+            "logGroupClass": "STANDARD",
+            "logGroupArn": "arn:aws:logs:ca-central-1:058264332511:log-group:/ecs/centris-web-scraper-task"
+        },
+        {
+            "logGroupName": "/ecs/web-scraper-backend-task",
+            "creationTime": 1728147365747,
+            "metricFilterCount": 0,
+            "arn": "arn:aws:logs:ca-central-1:058264332511:log-group:/ecs/web-scraper-backend-task:*",
+            "storedBytes": 7770407,
+            "logGroupClass": "STANDARD",
+            "logGroupArn": "arn:aws:logs:ca-central-1:058264332511:log-group:/ecs/web-scraper-backend-task"
+        }
+    ]
+}

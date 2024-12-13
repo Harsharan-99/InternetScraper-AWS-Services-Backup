@@ -1,0 +1,547 @@
+{
+    "services": [
+        {
+            "serviceArn": "arn:aws:ecs:ca-central-1:058264332511:service/web-scraper-cluster/web-scraper-service-v4",
+            "serviceName": "web-scraper-service-v4",
+            "clusterArn": "arn:aws:ecs:ca-central-1:058264332511:cluster/web-scraper-cluster",
+            "loadBalancers": [
+                {
+                    "targetGroupArn": "arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f",
+                    "containerName": "web-scraper-backend",
+                    "containerPort": 5000
+                }
+            ],
+            "serviceRegistries": [],
+            "status": "ACTIVE",
+            "desiredCount": 1,
+            "runningCount": 1,
+            "pendingCount": 0,
+            "launchType": "FARGATE",
+            "platformVersion": "1.4.0",
+            "platformFamily": "Linux",
+            "taskDefinition": "arn:aws:ecs:ca-central-1:058264332511:task-definition/web-scraper-backend-task:1",
+            "deploymentConfiguration": {
+                "maximumPercent": 200,
+                "minimumHealthyPercent": 100
+            },
+            "taskSets": [
+                {
+                    "id": "ecs-svc/5204559356370856292",
+                    "taskSetArn": "arn:aws:ecs:ca-central-1:058264332511:task-set/web-scraper-cluster/web-scraper-service-v4/ecs-svc/5204559356370856292",
+                    "serviceArn": "arn:aws:ecs:ca-central-1:058264332511:service/web-scraper-cluster/web-scraper-service-v4",
+                    "clusterArn": "arn:aws:ecs:ca-central-1:058264332511:cluster/web-scraper-cluster",
+                    "startedBy": "CodeDeploy",
+                    "externalId": "d-MVOTFH0A8",
+                    "status": "PRIMARY",
+                    "taskDefinition": "arn:aws:ecs:ca-central-1:058264332511:task-definition/web-scraper-backend-task:1",
+                    "computedDesiredCount": 1,
+                    "pendingCount": 0,
+                    "runningCount": 1,
+                    "createdAt": "2024-12-09T13:55:46.052000-05:00",
+                    "updatedAt": "2024-12-13T01:25:05.144000-05:00",
+                    "launchType": "FARGATE",
+                    "platformVersion": "1.4.0",
+                    "platformFamily": "Linux",
+                    "networkConfiguration": {
+                        "awsvpcConfiguration": {
+                            "subnets": [
+                                "subnet-0cbe613b714d07abd",
+                                "subnet-041f4369bc4868eb7",
+                                "subnet-0d8d889aad438a743"
+                            ],
+                            "securityGroups": [
+                                "sg-01718326340ac5a7a"
+                            ],
+                            "assignPublicIp": "ENABLED"
+                        }
+                    },
+                    "loadBalancers": [
+                        {
+                            "targetGroupArn": "arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f",
+                            "containerName": "web-scraper-backend",
+                            "containerPort": 5000
+                        }
+                    ],
+                    "serviceRegistries": [],
+                    "scale": {
+                        "value": 100.0,
+                        "unit": "PERCENT"
+                    },
+                    "stabilityStatus": "STEADY_STATE",
+                    "stabilityStatusAt": "2024-12-13T01:25:05.144000-05:00",
+                    "tags": []
+                }
+            ],
+            "roleArn": "arn:aws:iam::058264332511:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+            "events": [
+                {
+                    "id": "27e38704-f8bf-4fd3-b10d-d244feb9efc2",
+                    "createdAt": "2024-12-13T07:25:07.231000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "29815408-3c20-4b87-9959-e3e188b03ba8",
+                    "createdAt": "2024-12-13T01:25:05.151000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "c20cd46f-9cb5-4975-90d5-b0901eec2e26",
+                    "createdAt": "2024-12-13T01:25:05.150000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "a13e2db7-aae0-48f4-ade5-bdc639822cc4",
+                    "createdAt": "2024-12-13T01:25:05.140000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has begun draining connections on 1 tasks."
+                },
+                {
+                    "id": "3469e91c-5fb3-4d5f-8f28-780092d9fff1",
+                    "createdAt": "2024-12-13T01:25:05.136000-05:00",
+                    "message": "(service web-scraper-service-v4) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "3f70a287-18e7-410a-8f07-3a45f90717fc",
+                    "createdAt": "2024-12-13T01:24:56.192000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has stopped 1 running tasks: (task b575a52e9caf460ab626b8187dee6d93)."
+                },
+                {
+                    "id": "340b189c-c8c1-4d89-bb37-4aeabb04ba1e",
+                    "createdAt": "2024-12-13T01:24:07.391000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) registered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "dc5befc4-9038-4dee-98eb-11e2b55ec6a7",
+                    "createdAt": "2024-12-13T01:23:08.627000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has started 1 tasks: (task b575a52e9caf460ab626b8187dee6d93). Amazon ECS replaced 1 tasks due to an unhealthy status."
+                },
+                {
+                    "id": "fdcb9853-751e-4810-adf6-d9e319d304b6",
+                    "createdAt": "2024-12-13T01:23:07.869000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STABILIZING."
+                },
+                {
+                    "id": "f53edc20-bafd-40b0-b27b-1a93cea2fd6e",
+                    "createdAt": "2024-12-12T23:43:01.062000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "8f8c1389-f839-410b-b621-7241841861fa",
+                    "createdAt": "2024-12-12T17:42:18.267000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "f668913c-1814-4047-a4e1-c6541d312f70",
+                    "createdAt": "2024-12-12T17:42:18.266000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "114dd626-ab28-4459-8863-b0e5145293a7",
+                    "createdAt": "2024-12-12T17:42:18.257000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has begun draining connections on 1 tasks."
+                },
+                {
+                    "id": "a3cc934e-8968-48ef-ab67-b14bdfe482af",
+                    "createdAt": "2024-12-12T17:42:18.253000-05:00",
+                    "message": "(service web-scraper-service-v4) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "31f9da34-c1e5-4cb7-bc1f-fb469f2b2692",
+                    "createdAt": "2024-12-12T17:42:09.516000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has stopped 1 running tasks: (task ae1d4cd35b244f94ace573cad69192ae)."
+                },
+                {
+                    "id": "df4a1622-9a3f-4cb1-98cb-3c5f062ba9be",
+                    "createdAt": "2024-12-12T17:41:11.829000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) registered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "7e1ba74d-aac5-4a10-a4c6-c8d5ac3dc96d",
+                    "createdAt": "2024-12-12T17:40:10.609000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has started 1 tasks: (task 24dade22cbfc4e88a68c0762b8eaa37f). Amazon ECS replaced 1 tasks due to an unhealthy status."
+                },
+                {
+                    "id": "81acc112-d854-464d-a843-9c7372eaa43d",
+                    "createdAt": "2024-12-12T17:40:09.677000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STABILIZING."
+                },
+                {
+                    "id": "acc894fa-fddd-4bbf-97f5-6d232429060f",
+                    "createdAt": "2024-12-12T15:22:25.679000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "98b68fc4-e8d7-4cdf-9b56-88ca3f93f56f",
+                    "createdAt": "2024-12-12T09:21:38.866000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "22ad71ef-cdb6-4232-983d-202bfbafdd4f",
+                    "createdAt": "2024-12-12T09:21:38.865000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "60729d59-9d32-44b6-90bb-61ed6e3f214d",
+                    "createdAt": "2024-12-12T09:21:19.257000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) registered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "5a2a7cf5-365a-4134-ba46-54706a6b2ace",
+                    "createdAt": "2024-12-12T09:20:19.849000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has started 1 tasks: (task ae1d4cd35b244f94ace573cad69192ae)."
+                },
+                {
+                    "id": "8f6aad47-d18c-4af2-84d9-767cd1858656",
+                    "createdAt": "2024-12-12T09:19:03.189000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STABILIZING."
+                },
+                {
+                    "id": "1a355270-1330-4b22-bcba-805d181f1abf",
+                    "createdAt": "2024-12-12T09:19:03.125000-05:00",
+                    "message": "(service web-scraper-service-v4) updated computedDesiredCount for taskSet ecs-svc/5204559356370856292 to 1."
+                },
+                {
+                    "id": "cc775b85-6b7a-4855-b45d-514a894647f8",
+                    "createdAt": "2024-12-12T09:17:40.095000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "d686c2b4-967b-472f-9b02-3db8a8ce865d",
+                    "createdAt": "2024-12-12T09:17:40.094000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "6607f86f-5f00-4a8f-bed2-05e4fec97f2b",
+                    "createdAt": "2024-12-12T09:17:40.030000-05:00",
+                    "message": "(service web-scraper-service-v4) updated computedDesiredCount for taskSet ecs-svc/5204559356370856292 to 0."
+                },
+                {
+                    "id": "a5589fdc-dc49-4d68-bfcf-22934958a0b5",
+                    "createdAt": "2024-12-12T09:16:05.447000-05:00",
+                    "message": "(service web-scraper-service-v4) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "d90233cd-dc2f-4d5b-97fc-e17e47392e73",
+                    "createdAt": "2024-12-12T09:16:05.373000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has begun draining connections on 1 tasks."
+                },
+                {
+                    "id": "f504a5ac-ec48-48bd-a766-66fe3757acdf",
+                    "createdAt": "2024-12-12T09:16:05.370000-05:00",
+                    "message": "(service web-scraper-service-v4) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "ae29b3dd-4c48-41c4-a76c-a6ac1912d0f9",
+                    "createdAt": "2024-12-12T09:15:16.539000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has begun draining connections on 1 tasks."
+                },
+                {
+                    "id": "9c335f68-d67e-4e22-9e42-a8c51a8ed0bd",
+                    "createdAt": "2024-12-12T09:15:06.922000-05:00",
+                    "message": "(service web-scraper-service-v4) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "943637d9-dd44-4b93-85f4-b989e0d7917f",
+                    "createdAt": "2024-12-12T09:14:57.707000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) registered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "e99f24bb-1e76-411c-b864-823714d47688",
+                    "createdAt": "2024-12-12T09:14:08.109000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has started 1 tasks: (task eba3db739444403d996333b794dfd9ce). Amazon ECS replaced 1 tasks due to an unhealthy status."
+                },
+                {
+                    "id": "4f0dd437-99ad-4108-97e4-b6281abc4d3f",
+                    "createdAt": "2024-12-12T09:13:39.119000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) registered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "03a52a5f-8bff-4c85-84ca-013128ed473b",
+                    "createdAt": "2024-12-12T09:12:50.595000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has started 1 tasks: (task 32a9a65549e44d60963280e3b1409c48)."
+                },
+                {
+                    "id": "ef2e90b4-e17f-42f0-927d-2d92d6d58b75",
+                    "createdAt": "2024-12-12T09:12:49.787000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STABILIZING."
+                },
+                {
+                    "id": "6d59afcc-e6a5-42fc-8765-2025b28611e2",
+                    "createdAt": "2024-12-12T09:12:49.729000-05:00",
+                    "message": "(service web-scraper-service-v4) updated computedDesiredCount for taskSet ecs-svc/5204559356370856292 to 1."
+                },
+                {
+                    "id": "1900bde4-316d-41fe-a7e7-f8ab8476d2ae",
+                    "createdAt": "2024-12-12T08:42:55.864000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "4f5dab44-3764-48c7-9b0c-3894eec7e591",
+                    "createdAt": "2024-12-12T02:42:12.144000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "857dcd85-a52b-417e-8f09-c8889f7612c0",
+                    "createdAt": "2024-12-11T20:42:02.642000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "baa9c754-9734-42e9-853c-74a46784f7c6",
+                    "createdAt": "2024-12-11T14:42:01.284000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "71bab225-ffe2-4fac-a84f-699e57109d7b",
+                    "createdAt": "2024-12-11T08:41:26.843000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "1ac34676-277d-49bd-8fb6-1932658c98bc",
+                    "createdAt": "2024-12-11T02:41:26.790000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "32ebdf0d-85a3-49b8-9d65-98835db91717",
+                    "createdAt": "2024-12-10T20:40:56.322000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "6ff8c6ec-d6e7-460c-aa1e-9a0f9ffa2fad",
+                    "createdAt": "2024-12-10T14:40:29.325000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "42f7a386-09a1-47f9-8b75-bce0ba95ba1d",
+                    "createdAt": "2024-12-10T08:40:01.823000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "dab2f6f7-ed9f-4189-94bd-d8979e919c3c",
+                    "createdAt": "2024-12-10T02:39:47.495000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "92dc7d88-723d-4a73-be85-45a30481e336",
+                    "createdAt": "2024-12-09T20:39:38.671000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "a4ac1196-e210-434c-a435-b4290d1ee603",
+                    "createdAt": "2024-12-09T14:39:32.544000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "80eeb956-7e30-4065-8c3e-61b9e8df6cc5",
+                    "createdAt": "2024-12-09T14:39:32.543000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "29ec4ccb-7adb-452d-8ccc-02404c290812",
+                    "createdAt": "2024-12-09T14:39:32.535000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has begun draining connections on 1 tasks."
+                },
+                {
+                    "id": "54611b32-9125-4e65-a2c3-a2a0303a0c4c",
+                    "createdAt": "2024-12-09T14:39:32.531000-05:00",
+                    "message": "(service web-scraper-service-v4) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "4d9c4fa8-50b4-458f-8257-0fc3eff2e0d9",
+                    "createdAt": "2024-12-09T14:39:23.846000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has stopped 1 running tasks: (task 5d45898517a341cbabfd85ea39fa7d54)."
+                },
+                {
+                    "id": "49dd694a-855b-4da5-865e-077c8f318f60",
+                    "createdAt": "2024-12-09T14:39:23.775000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STABILIZING."
+                },
+                {
+                    "id": "7a4e9e58-bffd-414f-b0e5-68ea27fbd163",
+                    "createdAt": "2024-12-09T14:39:23.717000-05:00",
+                    "message": "(service web-scraper-service-v4) updated computedDesiredCount for taskSet ecs-svc/5204559356370856292 to 0."
+                },
+                {
+                    "id": "286ae94f-e345-4a1d-91cc-6a722c5e4372",
+                    "createdAt": "2024-12-09T14:02:24.753000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "6b36d06c-4a52-4d9d-9086-2cd8d008ed01",
+                    "createdAt": "2024-12-09T14:02:24.752000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "3eab8527-f0bd-4038-afd7-3e2d0a8fba73",
+                    "createdAt": "2024-12-09T14:02:05.352000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) registered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "d506b696-a4ab-430d-8e13-7ae86cdd0b78",
+                    "createdAt": "2024-12-09T14:01:08.362000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has started 1 tasks: (task 5d45898517a341cbabfd85ea39fa7d54)."
+                },
+                {
+                    "id": "610adea0-c74d-40a5-9b44-a0f8e0cec658",
+                    "createdAt": "2024-12-09T14:01:07.668000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STABILIZING."
+                },
+                {
+                    "id": "e8618b82-51e7-4bb4-ac83-0a772fe1bb64",
+                    "createdAt": "2024-12-09T14:01:07.605000-05:00",
+                    "message": "(service web-scraper-service-v4) updated computedDesiredCount for taskSet ecs-svc/5204559356370856292 to 1."
+                },
+                {
+                    "id": "706719cd-aa6b-491e-8110-98c84f33825f",
+                    "createdAt": "2024-12-09T14:00:35.302000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "0f681e90-2fef-43b4-9351-43d058c5c652",
+                    "createdAt": "2024-12-09T14:00:35.301000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "c5294afb-c06a-4187-81e1-88abed4baa48",
+                    "createdAt": "2024-12-09T14:00:35.290000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has begun draining connections on 1 tasks."
+                },
+                {
+                    "id": "89dec86b-62be-45ca-8485-83fef79cd805",
+                    "createdAt": "2024-12-09T14:00:35.286000-05:00",
+                    "message": "(service web-scraper-service-v4) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "9fa2e2ad-17f1-4975-a8a0-d7d7801f7275",
+                    "createdAt": "2024-12-09T14:00:26.378000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has stopped 1 running tasks: (task 5d3f1577fe124ce195d36af4101bbdaf)."
+                },
+                {
+                    "id": "43a84e24-843f-40bf-b71d-714222aea5cc",
+                    "createdAt": "2024-12-09T14:00:26.326000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STABILIZING."
+                },
+                {
+                    "id": "026621d3-4c71-4bdf-b829-d23f2b212806",
+                    "createdAt": "2024-12-09T14:00:26.261000-05:00",
+                    "message": "(service web-scraper-service-v4) updated computedDesiredCount for taskSet ecs-svc/5204559356370856292 to 0."
+                },
+                {
+                    "id": "ce42ac6f-e668-443a-81b9-17e576c3ff71",
+                    "createdAt": "2024-12-09T14:00:13.511000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "347428f4-2157-449e-a850-aee806f0870a",
+                    "createdAt": "2024-12-09T13:59:13.402000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/0734564558442131493) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "0e4ad36b-f223-4ed8-8ef8-d63c90714a8c",
+                    "createdAt": "2024-12-09T13:59:13.390000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/0734564558442131493) has begun draining connections on 1 tasks."
+                },
+                {
+                    "id": "71e07668-698d-42ee-b680-11eb3f80c72f",
+                    "createdAt": "2024-12-09T13:59:13.385000-05:00",
+                    "message": "(service web-scraper-service-v4) deregistered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/tg-web-sc-web-scraper-service--2/ba3754f58acc6c47)"
+                },
+                {
+                    "id": "d9107afe-6fd2-497c-a4e3-b70f51f4c461",
+                    "createdAt": "2024-12-09T13:59:03.648000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/0734564558442131493) has stopped 1 running tasks: (task 3a366bfeae724385bbe85dda93628a7e)."
+                },
+                {
+                    "id": "4a36f3e0-86a8-4f30-a8c9-58ea61e91720",
+                    "createdAt": "2024-12-09T13:59:03.605000-05:00",
+                    "message": "(service web-scraper-service-v4) updated computedDesiredCount for taskSet ecs-svc/0734564558442131493 to 0."
+                },
+                {
+                    "id": "a6348ab8-07f2-44a2-bb7b-b02367f9ebfa",
+                    "createdAt": "2024-12-09T13:58:10.171000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "d7c49f93-0c50-43ec-8dbc-158935b1444a",
+                    "createdAt": "2024-12-09T13:58:10.170000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "d6398aaf-2d6b-4036-966a-7681813b755b",
+                    "createdAt": "2024-12-09T13:57:51.133000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STABILIZING."
+                },
+                {
+                    "id": "5f3556bc-378c-484b-80f2-75df3f128f1a",
+                    "createdAt": "2024-12-09T13:56:45.625000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "c003eb69-6a54-427c-a8d1-9f1a24f4b61d",
+                    "createdAt": "2024-12-09T13:56:45.624000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "582c13bc-a547-4294-a259-0333908c81d2",
+                    "createdAt": "2024-12-09T13:56:37.015000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) registered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/web-scraper-target-grp/6ccefd96afce424f)"
+                },
+                {
+                    "id": "7d65ab5d-19a8-4eff-9d01-a158ef7fd49c",
+                    "createdAt": "2024-12-09T13:55:47.938000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/5204559356370856292) has started 1 tasks: (task 5d3f1577fe124ce195d36af4101bbdaf)."
+                },
+                {
+                    "id": "a4785f21-3ee2-4a34-a005-6f8d56648ef7",
+                    "createdAt": "2024-12-09T13:55:47.027000-05:00",
+                    "message": "(service web-scraper-service-v4) updated computedDesiredCount for taskSet ecs-svc/5204559356370856292 to 1."
+                },
+                {
+                    "id": "912dc973-15fc-479a-8e5b-079abfeed9dd",
+                    "createdAt": "2024-12-09T13:32:36.761000-05:00",
+                    "message": "(service web-scraper-service-v4) has reached a steady state."
+                },
+                {
+                    "id": "9a16570f-ee94-47f8-9ba8-bbec26c76d9e",
+                    "createdAt": "2024-12-09T13:32:36.760000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/0734564558442131493) updated state to STEADY_STATE."
+                },
+                {
+                    "id": "37ece214-8d14-439c-bd9d-c5605bec30e2",
+                    "createdAt": "2024-12-09T13:32:17.732000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/0734564558442131493) registered 1 targets in (target-group arn:aws:elasticloadbalancing:ca-central-1:058264332511:targetgroup/tg-web-sc-web-scraper-service--2/ba3754f58acc6c47)"
+                },
+                {
+                    "id": "ae70b992-c925-4fa7-aa35-e462c11f11da",
+                    "createdAt": "2024-12-09T13:31:29.611000-05:00",
+                    "message": "(service web-scraper-service-v4, taskSet ecs-svc/0734564558442131493) has started 1 tasks: (task 3a366bfeae724385bbe85dda93628a7e)."
+                }
+            ],
+            "createdAt": "2024-12-09T13:31:22.412000-05:00",
+            "placementConstraints": [],
+            "placementStrategy": [],
+            "networkConfiguration": {
+                "awsvpcConfiguration": {
+                    "subnets": [
+                        "subnet-0cbe613b714d07abd",
+                        "subnet-041f4369bc4868eb7",
+                        "subnet-0d8d889aad438a743"
+                    ],
+                    "securityGroups": [
+                        "sg-01718326340ac5a7a"
+                    ],
+                    "assignPublicIp": "ENABLED"
+                }
+            },
+            "healthCheckGracePeriodSeconds": 10,
+            "schedulingStrategy": "REPLICA",
+            "deploymentController": {
+                "type": "CODE_DEPLOY"
+            },
+            "createdBy": "arn:aws:iam::058264332511:user/manthan",
+            "enableECSManagedTags": true,
+            "propagateTags": "NONE",
+            "enableExecuteCommand": false,
+            "availabilityZoneRebalancing": "ENABLED"
+        }
+    ],
+    "failures": []
+}

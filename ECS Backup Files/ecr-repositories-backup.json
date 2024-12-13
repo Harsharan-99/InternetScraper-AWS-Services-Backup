@@ -1,0 +1,32 @@
+{
+    "repositories": [
+        {
+            "repositoryArn": "arn:aws:ecr:ca-central-1:058264332511:repository/centris-scraper",
+            "registryId": "058264332511",
+            "repositoryName": "centris-scraper",
+            "repositoryUri": "058264332511.dkr.ecr.ca-central-1.amazonaws.com/centris-scraper",
+            "createdAt": "2024-09-03T16:20:25.834000-04:00",
+            "imageTagMutability": "MUTABLE",
+            "imageScanningConfiguration": {
+                "scanOnPush": false
+            },
+            "encryptionConfiguration": {
+                "encryptionType": "AES256"
+            }
+        },
+        {
+            "repositoryArn": "arn:aws:ecr:ca-central-1:058264332511:repository/web-scraper-backend",
+            "registryId": "058264332511",
+            "repositoryName": "web-scraper-backend",
+            "repositoryUri": "058264332511.dkr.ecr.ca-central-1.amazonaws.com/web-scraper-backend",
+            "createdAt": "2024-10-03T15:14:13.656000-04:00",
+            "imageTagMutability": "MUTABLE",
+            "imageScanningConfiguration": {
+                "scanOnPush": false
+            },
+            "encryptionConfiguration": {
+                "encryptionType": "AES256"
+            }
+        }
+    ]
+}
